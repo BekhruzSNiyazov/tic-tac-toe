@@ -228,6 +228,7 @@ while not isBoardFull(board):
             if board[3] == l and board[5] == l and board[7] == l:
                 pygame.draw.line(win, (255, 255, 255), (600, 20), (20, 600), 5)
             time.sleep(0.5)
+            break
 
     if not playerMove:
         if not isWinner(board, "X"):
@@ -259,6 +260,7 @@ while not isBoardFull(board):
             if board[3] == l and board[5] == l and board[7] == l:
                 pygame.draw.line(win, (255, 255, 255), (600, 20), (20, 600), 5)
             time.sleep(0.5)
+            break
 
     if isBoardFull(board):
         time.sleep(1)
