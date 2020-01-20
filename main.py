@@ -227,15 +227,12 @@ while not isBoardFull(board):
                 pygame.draw.line(win, (255, 255, 255), (20, 20), (600, 600), 5)
             if board[3] == l and board[5] == l and board[7] == l:
                 pygame.draw.line(win, (255, 255, 255), (600, 20), (20, 600), 5)
-            time.sleep(0.5)
-            break
 
     if not playerMove:
         if not isWinner(board, "X"):
             move = compMove()
             if move == 0:
-                time.sleep(1)
-                break
+            	print("Tie game!")
             else:
                 draw(win, "O", move)
                 insertLetter("O", move)
@@ -259,12 +256,9 @@ while not isBoardFull(board):
                 pygame.draw.line(win, (255, 255, 255), (20, 20), (600, 600), 5)
             if board[3] == l and board[5] == l and board[7] == l:
                 pygame.draw.line(win, (255, 255, 255), (600, 20), (20, 600), 5)
-            time.sleep(0.5)
-            break
 
     if isBoardFull(board):
-        time.sleep(1)
-        break
+        print("Tie game!")
 
     reDrawWindow(win)
 
